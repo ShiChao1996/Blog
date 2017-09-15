@@ -4,6 +4,7 @@
     "index": "./index.js"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "antd": "^2.1.0",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
