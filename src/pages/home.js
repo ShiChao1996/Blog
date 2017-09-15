@@ -4,6 +4,7 @@ import {
     Card,
     Affix
 } from 'antd';
+import Side from '../components/sider';
 import './home.css';
 
 const lists = [
@@ -25,16 +26,18 @@ export default class HomePage extends Component{
     render(){
         return(
             <div className="body">
-                <div className="bodyLeft">
-                    <Affix>
-                        <div className='box'></div>
-                    </Affix>
-                </div>
-
                 <div className='bodyRight'>
                     <Card>
                         { List(lists) }
                     </Card>
+                </div>
+
+                <div className="bodyLeft">
+                    <Affix>
+                        <div className='box'>
+                            { Side('Lovae', '杨柳岸，晓风残月') }
+                        </div>
+                    </Affix>
                 </div>
 
             </div>

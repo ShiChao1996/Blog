@@ -1,23 +1,25 @@
-.body{
+.body {
     position: relative;
-    overflow:auto
+    overflow: auto
 }
 
-.bodyRight{
+.bodyRight {
     background-color: #364d79;
     width: 800px;
+    margin-top: 30px;
+    margin-right: 20px;
     float: right;
 }
 
-.bodyLeft{
-    margin-top: 60px;
-    margin-left: 60px;
-    float: left;
-    background-color: #364d79;
+.bodyLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.box{
-    height: 300px;
-    width: 200px;
+.box {
+    margin: 100px 30px;
+    height: 400px;
+    width: 260px;
     background-color: #364d79;
 }
