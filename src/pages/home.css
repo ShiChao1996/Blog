@@ -1,0 +1,23 @@
+.body{
+    position: relative;
+    overflow:auto
+}
+
+.bodyRight{
+    background-color: #364d79;
+    width: 800px;
+    float: right;
+}
+
+.bodyLeft{
+    margin-top: 60px;
+    margin-left: 60px;
+    float: left;
+    background-color: #364d79;
+}
+
+.box{
+    height: 300px;
+    width: 200px;
+    background-color: #364d79;
+}
