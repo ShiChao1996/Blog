@@ -11,18 +11,17 @@
     margin: 10px 0;
 }
 
-.links {
+.siderLinks {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width: 200px;
+    width: 150px;
     align-items: center;
     margin: 10px 0;
 }
 
 .link{
-    width: 50px;
-    margin: 0 15px;
+    margin: 15px;
 }
 
 .icon{

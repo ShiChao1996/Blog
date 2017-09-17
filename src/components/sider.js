@@ -14,7 +14,7 @@ const sider = (name, desc) => {
                 <img src={require('../image/avatar.png')} className='avatar'/>
                 <h1>{name}</h1>
                 <p>{desc}</p>
-                <div className="links">
+                <div className="siderLinks">
                     <a href="https://github.com/ShiChao1996" target='_blank'><Icon type="github" style={{fontSize: 18}} /></a>
                     <a href="http://www.jianshu.com/u/b18a484f74f1" target='_blank'><img src={require('../image/jianshu.png')}  width='18' /></a>
                     <Icon type="mail" style={{fontSize: 18}} />

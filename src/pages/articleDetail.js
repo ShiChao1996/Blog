@@ -8,7 +8,6 @@ import {
 import MarkDown from '../components/markdown';
 import Container from '../container/container';
 import './articleDetail.css';
-import str from './aa';
 import { Http } from '../utils/http';
 
 const request = require('request');
@@ -29,11 +28,12 @@ export default class HomePage extends Component{
     }
 
     componentWillMount(){
-        Http.post('http://127.0.0.1:7002/animaldetail/get', '', {id: 6}, (data)=>{
-            console.log(data.resp.content)
-            let str = data.resp.content.replace("\"", '')
+        Http.post('http://127.0.0.1:7001/surrounddetail/get', '', {id: 5}, (data)=>{
+            let md = JSON.parse(data.resp.content);
+            console.log(md)
+
             this.setState({
-                text: str
+                text: md
             })
         })
     }
