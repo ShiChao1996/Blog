@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import List from '../components/list';
 import {
     Card,
     Affix,
@@ -9,17 +8,6 @@ import MarkDown from '../components/markdown';
 import Container from '../container/container';
 import './articleDetail.css';
 import { Http } from '../utils/http';
-
-const request = require('request');
-const lists = [
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-]
 
 export default class HomePage extends Component{
     constructor(props){
