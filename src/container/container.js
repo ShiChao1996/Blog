@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {Component} from 'react'
 import {
     BrowserRouter as Router,
     Route,
@@ -11,17 +11,22 @@ import {
 } from 'antd';
 
 import './index.css'
-import Header from '../components/header';
-import HomePage from '../pages/home';
+import TopBar from '../components/topBar';
 
-const Container = () => (
-        <div className='container' style={{minHeight: window.screen.availHeight}}>
-            <Header/>
-
-
-            <div className='footer'>
-                Powered by Lovae | 2017
+export default class Container extends Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        const { child } = this.props;
+        return(
+            <div className='container' style={{minHeight: window.screen.availHeight}}>
+                <TopBar type='dark'/>
+                { child && child() }
+                <div className='footer'>
+                    Powered by Lovae | 2017
+                </div>
             </div>
-        </div>
-)
-export default Container
+        )
+    }
+}

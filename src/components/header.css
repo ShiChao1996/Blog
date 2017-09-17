@@ -26,13 +26,16 @@
 .linksBox{
     height: 60px;
     box-sizing: border-box;
+    width: 350px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
 }
 
-.links{
-    margin: 5px 10px;
+.link{
+    color: white;
+    font-size: 14px !important;
 }
 
 .avatarBox{

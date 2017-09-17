@@ -8,9 +8,8 @@ import {
 import Side from '../components/sider';
 import './home.css';
 import Header from '../components/header';
-import 'whatwg-fetch';
 
-const request = require('request');
+import { Http }  from '../utils/http';
 const lists = [
     {title: '算法', desc: '冒泡排序。。。。。'},
     {title: '算法', desc: '冒泡排序。。。。。'},
@@ -28,12 +27,15 @@ export default class HomePage extends Component{
     }
 
     componentWillMount(){
-
+        console.log(Http)
     }
 
-    get(){
-        fetch('127.0.0.1:7002/species/get', {
-            method: 'GET',
+    request(){
+        Http.get('http://127.0.0.1:7001/species/get', '', function (res) {
+            console.log(res)
+            console.log(res.data)
+        }, function (err) {
+            console.log("err: ", err)
         })
     }
 
@@ -50,7 +52,7 @@ export default class HomePage extends Component{
                 <div className="bodyLeft">
                     <Affix>
                         <div className='box'>
-                            <Button onClick={() => this.get()}>aa</Button>
+                            <Button onClick={() => this.request()}>aa</Button>
                             { Side('Lovae', '杨柳岸，晓风残月') }
                         </div>
                     </Affix>

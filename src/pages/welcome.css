@@ -132,12 +132,12 @@
     align-self: center;
 }
 
-.link{
+.myLink{
     color: white;
     font-size: 30px;
     transition: all 1s;
 }
 
-.link:hover{
+.myLink:hover{
     color: #ff7457;
 }

@@ -8,6 +8,7 @@ import {
     Avatar,
     Carousel,
 } from 'antd';
+import TopBar from '../components/topBar';
 import './header.css'
 
 const titles = [
@@ -41,25 +42,8 @@ export default class Header extends Component {
     render() {
         return (
             <div className='header'>
-                <div className='headBar'>
-                    <div className='avatarBox'>
-                        <Avatar src={require('../image/avatar.png')} size='large'/>
-                        <span className='name'>Lovae</span>
-                    </div>
 
-                    <div className='linksBox'>
-                        <Button ghost className='links'>
-                            <Link to='/home'>Home</Link>
-                        </Button>
-                        <Button ghost className='links'>
-                            <Link to='/articles'>Articles</Link>
-                        </Button>
-                        <Button ghost className='links'>
-                            <Link to='/about'>About</Link>
-                        </Button>
-                    </div>
-                </div>
-
+                <TopBar />
                 <Carousel autoplay dots={false} autoplaySpeed={8000} speed={1000}
                           effect="fade"
                           beforeChange={(from, to) => this.onChange(from, to)}>
