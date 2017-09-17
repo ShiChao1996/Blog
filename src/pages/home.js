@@ -52,12 +52,13 @@ export default class HomePage extends Component{
                 <div className="bodyLeft">
                     <Affix>
                         <div className='box'>
-                            <Button onClick={() => this.request()}>aa</Button>
                             { Side('Lovae', '杨柳岸，晓风残月') }
                         </div>
                     </Affix>
                 </div>
-
+                <div className='footer'>
+                    Powered by Lovae | 2017
+                </div>
             </div>
         )
     }

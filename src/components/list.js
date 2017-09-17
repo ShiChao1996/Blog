@@ -7,7 +7,7 @@ import './listItem.css'
 
 const List = (list) => {
     return(
-        <QueueAnim delay={500} interval={300}>
+        <QueueAnim delay={1000} interval={300}>
             {list.map((line, index) => {
                     return (
                         <div className="listItem" key={index}>

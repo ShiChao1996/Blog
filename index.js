@@ -17,9 +17,6 @@ const router = (
             <Route exact path="/" component={Welcome} />
             <Route path="/about" component={HomePage}/>
             <Route path="/articles" component={ArticleDetail}/>
-            <div className='footer'>
-                Powered by Lovae | 2017
-            </div>
         </div>
     </Router>
 )
