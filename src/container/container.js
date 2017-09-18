@@ -4,11 +4,7 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import {
-    Row,
-    Col,
-    Avatar
-} from 'antd';
+
 
 import './index.css'
 import TopBar from '../components/topBar';

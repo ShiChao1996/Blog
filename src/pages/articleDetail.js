@@ -5,9 +5,9 @@ import {
     Button
 } from 'antd';
 import MarkDown from '../components/markdown';
-import Container from '../container/container';
+import TopBar from '../components/topBar';
 import './articleDetail.css';
-import { Http } from '../utils/http';
+import Http from '../utils/http';
 
 export default class HomePage extends Component{
     constructor(props){
@@ -16,36 +16,30 @@ export default class HomePage extends Component{
     }
 
     componentWillMount(){
-        Http.post('http://127.0.0.1:7001/surrounddetail/get', '', {id: 5}, (data)=>{
-            let md = JSON.parse(data.resp.content);
+        console.log(Http)
+        Http.Post('http://127.0.0.1:7001/animaldetail/get', {id: 1}, (data)=>{
+            //let md = JSON.parse(data.resp.content);
+            let md = data.resp.content
             console.log(md)
 
             this.setState({
                 text: md
             })
-        })
-    }
-
-    get(){
-        fetch('127.0.0.1:7002/species/get', {
-            method: 'GET',
-        })
+        }, (err) => console.log(err))
     }
 
     render(){
         return(
             <div style={{width: '100%'}}>
-                <Container child={this.child} />
+                <TopBar type='dark'/>
+                <div className='content'>
+                    <MarkDown text={this.state.text} />
+                </div>
+                <div className='footer'>
+                    Powered by Lovae | 2017
+                </div>
             </div>
 
-        )
-    }
-
-    child = () => {
-        return (
-            <div className='content'>
-                <MarkDown text={this.state.text} />
-            </div>
         )
     }
 }

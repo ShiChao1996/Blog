@@ -8,7 +8,7 @@ import './welcome.css';
 import {
     Route,
     Link
-} from 'react-router-dom';
+} from 'react-router';
 import QueueAnim from 'rc-queue-anim';
 
 const RadioGroup = Radio.Group;
@@ -198,7 +198,7 @@ class LogoGather extends React.Component {
                         <span key='a' className='welcome'>Welcome to Lovae's Blog</span>
                         <br/>
                         <div className="linkText" key='b'>
-                            <Link to='/about' className='myLink'>
+                            <Link to='/home' className='myLink'>
                                 Go HomePage
                             </Link>
                         </div>
@@ -224,11 +224,15 @@ export default class Welcome extends React.Component{
 
     render(){
         return(
-            <LogoGather
-                image={this.state.image}
-                pixSize={this.state.pixSize}
-                pointSizeMin={this.state.pointSize}
-            />
+            <div>
+                <LogoGather
+                    image={this.state.image}
+                    pixSize={this.state.pixSize}
+                    pointSizeMin={this.state.pointSize}
+                />
+                {this.props.children}
+            </div>
+
         )
     }
 }
