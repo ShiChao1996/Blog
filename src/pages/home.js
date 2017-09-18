@@ -57,7 +57,8 @@ export default class HomePage extends Component{
                     </Affix>
                 </div>
                 <div className='footer'>
-                    Powered by Lovae | 2017
+                    <p>© 2017 ♥ ShiChao</p>
+                    <span>Powered by Lovae | 2017</span>
                 </div>
             </div>
         )

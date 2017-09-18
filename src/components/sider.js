@@ -9,7 +9,7 @@ import './sider.css';
 
 const sider = (name, desc) => {
     return(
-        <Card data-anijs="if: scroll, on: window, do: fadeInDown animated">
+        <Card>
             <div className="sideBox">
                 <img src={require('../image/avatar.png')} className='avatar'/>
                 <h1>{name}</h1>

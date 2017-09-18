@@ -21,13 +21,3 @@
 
 .right{
 }
-
-.footer{
-    height: 60px;
-    width: 100%;
-    line-height: 60px;
-    position: absolute;
-    bottom: -60px;
-    text-align: center;
-    background-color: antiquewhite;
-}
