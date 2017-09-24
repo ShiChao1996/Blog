@@ -19,9 +19,8 @@ const router = (
             <IndexRoute component={Welcome} />
             <Route path="/welcome" component={Welcome} />
             <Route path="/home" component={HomePage}/>
-            <Route path="/articles" component={ArticleDetail}/>
+            <Route path="/article" component={ArticleDetail}/>
         </Route>
-
     </Router>
 )
 

@@ -9,33 +9,25 @@ import Side from '../components/sider';
 import './home.css';
 import Header from '../components/header';
 
-import { Http }  from '../utils/http';
-const lists = [
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-    {title: '算法', desc: '冒泡排序。。。。。'},
-]
+import Http  from '../utils/http';
 
 export default class HomePage extends Component{
     constructor(props){
         super(props);
-        this.state = {}
+        this.state = {
+            articleList: []
+        }
     }
 
     componentWillMount(){
-        console.log(Http)
-    }
-
-    request(){
-        Http.get('http://127.0.0.1:7001/species/get', '', function (res) {
-            console.log(res)
-            console.log(res.data)
-        }, function (err) {
-            console.log("err: ", err)
+        Http.Get(Http.url('article/getlist'), (res) => {
+            if(res.status === 0){
+                this.setState({
+                  articleList: res.resp
+                })
+            }
+        }, (err) => {
+            console.log(err)
         })
     }
 
@@ -45,7 +37,7 @@ export default class HomePage extends Component{
                 <Header />
                 <div className='bodyRight'>
                     <Card>
-                        { List(lists) }
+                        { List(this.state.articleList, ) }
                     </Card>
                 </div>
 

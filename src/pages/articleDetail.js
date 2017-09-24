@@ -13,19 +13,24 @@ import Http from '../utils/http';
 export default class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      text: ''
+    }
   }
 
   componentWillMount() {
     console.log(Http)
-    Http.Post('http://127.0.0.1:7001/animaldetail/get', { id: 1 }, (data) => {
-      //let md = JSON.parse(data.resp.content);
-      let md = data.resp.content
-      console.log(md)
-
-      this.setState({
-        text: md
-      })
+    let data = this.props.location.query;
+    console.log(data);
+    Http.Post('http://127.0.0.1:7001/article/getdetail', data, (res) => {
+      if(res.status === 0){
+        console.log(res)
+        let md = res.resp.content
+        console.log(md)
+        this.setState({
+          text: md.toString()
+        })
+      }
     }, (err) => console.log(err))
   }
 

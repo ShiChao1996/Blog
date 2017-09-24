@@ -50,6 +50,7 @@ class LogoGather extends React.Component {
     }
 
     onMouseEnter = () => {
+        console.log('enteer')
         // !this.gather && this.updateTweenData();
         if (!this.gather) {
             this.updateTweenData();
@@ -58,6 +59,7 @@ class LogoGather extends React.Component {
     };
 
     onMouseLeave = () => {
+        console.log('leave')
         // this.gather && this.updateTweenData();
         if (this.gather) {
             this.updateTweenData();
@@ -71,7 +73,7 @@ class LogoGather extends React.Component {
         for (let i = 0; i < w; i += number) {
             for (let j = 0; j < h; j += number) {
                 if (data[((i + j * w) * 4) + 3] > 150) {
-                    this.pointArray.push({ x: i, y: j });
+                    this.pointArray.push({ x: i - 50, y: j });
                 }
             }
         }
@@ -198,7 +200,7 @@ class LogoGather extends React.Component {
                         <span key='a' className='welcome'>Welcome to Lovae's Blog</span>
                         <br/>
                         <div className="linkText" key='b'>
-                            <Link to='/home' className='myLink'>
+                            <Link to='/home' className='myLink' activeStyle={{color: 'blue', backgroundColor: '#ffffff'}}>
                                 Go HomePage
                             </Link>
                         </div>
