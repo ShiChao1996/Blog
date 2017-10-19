@@ -22,7 +22,7 @@ const List = (list, onClick) => {
               <Link to={{ pathname: '/article', query: {id: line._id} }} className='myLink'>
                 <Card>
                   <h2>{line.title}</h2>
-                  <span>{line.content.toString().slice(0, 100)}...</span>
+                  <span className='contentPreview'>{line.content.toString().slice(0, 100)}...</span>
                   <div>
                     {line.tags.map((tag, Index) => {
                       return <Tag key={tools.generalKey()}

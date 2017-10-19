@@ -1,3 +1,10 @@
 .listItem{
     margin: 20px 10px;
 }
+
+.contentPreview{
+    font-size: 14px;
+    display: inline-block;
+    color: #666666;
+    margin: 10px;
+}
