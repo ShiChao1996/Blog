@@ -20,7 +20,7 @@ export default class HomePage extends Component{
     }
 
     componentWillMount(){
-        Http.Get(Http.url('article/getlist'), (res) => {
+        Http.Get(Http.url('article/getall'), (res) => {
             if(res.status === 0){
                 this.setState({
                   articleList: res.resp
@@ -41,7 +41,7 @@ export default class HomePage extends Component{
                     </Card>
                 </div>
 
-                <div className="bodyLeft">
+                {/*<div className="bodyLeft">
                     <Affix>
                         <div className='box'>
                             { Side('Lovae', '杨柳岸，晓风残月') }
@@ -51,7 +51,7 @@ export default class HomePage extends Component{
                 <div className='footer'>
                     <p>© 2017 ♥ ShiChao</p>
                     <span>Powered by Lovae | 2017</span>
-                </div>
+                </div>*/}
             </div>
         )
     }

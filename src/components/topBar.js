@@ -28,6 +28,9 @@ export default class topBar extends Component{
                     <div className='myButton'>
                         <a href='/#/about' className={light ? 'linkLight' : 'linkDark'}>About</a>
                     </div>
+                    <div className='myButton'>
+                        <a href='/#/animate' className={light ? 'linkLight' : 'linkDark'}>animate</a>
+                    </div>
                 </div>
             </div>
         )
