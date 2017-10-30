@@ -35,7 +35,7 @@ export default class HomePage extends Component{
         return(
             <div className="body">
                 <Header />
-                <div className='bodyRight'>
+                <div className='content'>
                     <Card>
                         { List(this.state.articleList, ) }
                     </Card>

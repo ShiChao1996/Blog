@@ -19,6 +19,12 @@
     align-items: center;
 }
 
+.content{
+    margin: 0 auto;
+    width: 80%;
+    min-width: 800px;
+}
+
 .box {
     margin: 100px 30px;
     height: 400px;

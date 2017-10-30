@@ -4,10 +4,7 @@ import {
   Tag,
   Timeline
 } from 'antd';
-import {
-  Route,
-  Link,
-} from 'react-router';
+
 import { OverPack } from 'rc-scroll-anim';
 import TweenOne from 'rc-tween-one';
 import QueueAnim from 'rc-queue-anim';
