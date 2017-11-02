@@ -13,6 +13,14 @@
     margin: 10px 0;
 }
 
+.card{
+    transition: 0.3s all;
+}
+
+.card:hover{
+    transform: scale(0.95);
+}
+
 .date{
     font-size: 18px;
     color: #999999;

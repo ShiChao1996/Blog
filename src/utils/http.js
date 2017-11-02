@@ -191,7 +191,7 @@ function requestByPost(url, params, onSucceed, onFailure) {
 }
 
 export function getUrl(route) {
-  return "http://127.0.0.1:7001/" + route;
+  return "http://47.95.229.232:7001/" + route;
 }
 
 const Http = {

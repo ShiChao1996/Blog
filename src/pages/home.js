@@ -52,6 +52,9 @@ export default class HomePage extends Component{
                     <p>© 2017 ♥ ShiChao</p>
                     <span>Powered by Lovae | 2017</span>
                 </div>*/}
+                <div className='footer'>
+                    Made by Lovae | 2017
+                </div>
             </div>
         )
     }

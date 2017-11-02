@@ -7,14 +7,17 @@
     "animate.css": "^3.5.2",
     "antd": "^2.1.0",
     "rc-queue-anim": "^1.2.2",
+    "rc-scroll-anim": "^2.0.2",
     "rc-tween-one": "^1.4.5",
     "react": "^15.1.0",
+    "moment": "^2.19.1",
     "react-dom": "^15.1.0",
     "react-markdown": "^2.5.0",
     "react-native": "^0.48.3",
-    "react-router-dom": "^4.2.2",
     "react-router": "^3.0.0",
+    "react-router-dom": "^4.2.2",
     "request": "^2.81.0",
+    "src": "^1.1.2",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
@@ -41,7 +44,7 @@
   "scripts": {
     "build": "atool-build",
     "lint": "eslint --ext .js,.jsx src/",
-    "start": "dora --plugins webpack",
+    "start": "dora -p 8081 --plugins webpack",
     "test": "atool-test-mocha ./**/__tests__/*-test.js"
   }
 }

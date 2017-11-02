@@ -19,7 +19,8 @@ const router = (
             <IndexRoute component={Welcome} />
             <Route path="/welcome" component={Welcome} />
             <Route path="/home" component={HomePage}/>
-            <Route path="/article" component={ArticleDetail}/>
+            <Route path="/archive" component={HomePage} />
+            <Route path="/article" component={ArticleDetail} />
         </Route>
     </Router>
 )

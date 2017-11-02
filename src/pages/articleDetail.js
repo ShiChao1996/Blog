@@ -8,7 +8,7 @@ import MarkDown from '../components/markdown';
 import TopBar from '../components/topBar';
 import Container from '../container/container';
 import './articleDetail.css';
-import Http from '../utils/http';
+import Http, { getUrl } from '../utils/http';
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -22,7 +22,8 @@ export default class HomePage extends Component {
     console.log(Http)
     let data = this.props.location.query;
     console.log(data);
-    Http.Post('http://127.0.0.1:7001/article/getdetail', data, (res) => {
+    console.log(Http.url('article/getdetail'))
+    Http.Post(Http.url('article/getdetail'), data, (res) => {
       if(res.status === 0){
         console.log(res)
         let md = res.resp.content
