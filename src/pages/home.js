@@ -8,6 +8,7 @@ import {
 import Side from '../components/sider';
 import './home.css';
 import Header from '../components/header';
+import Canvas from './animateBackground';
 
 import Http  from '../utils/http';
 
@@ -35,6 +36,7 @@ export default class HomePage extends Component{
         return(
             <div className="body">
                 <Header />
+                <Canvas />
                 <div className='content'>
                     <Card>
                         { List(this.state.articleList, ) }

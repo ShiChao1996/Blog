@@ -1,6 +1,7 @@
 .header{
     position: relative;
     height: 400px;
+    z-index: 1;
 }
 
 .ant-carousel .slick-slide {

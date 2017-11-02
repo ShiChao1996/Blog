@@ -23,6 +23,7 @@
     margin: 0 auto;
     width: 80%;
     min-width: 800px;
+    opacity: 0.85;
 }
 
 .box {
