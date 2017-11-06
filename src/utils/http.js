@@ -191,13 +191,19 @@ function requestByPost(url, params, onSucceed, onFailure) {
 }
 
 export function getUrl(route) {
-  return "http://47.95.229.232:7001/" + route;
+  //return "http://47.95.229.232:7001/" + route;
+  return "http://127.0.0.1:7006/" + route;
+}
+
+export function picUrl(route) {
+  return "http://127.0.0.1:8082/" + route;
 }
 
 const Http = {
   Get: requestByGet,
   Post: requestByPost,
-  url: getUrl
+  url: getUrl,
+  picUrl
 };
 
 export default Http;

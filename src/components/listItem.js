@@ -4,6 +4,7 @@ import {
   Tag
 } from 'antd';
 import { tools } from '../utils/tools';
+import Http from '../utils/http';
 import moment from 'moment';
 import {
   Route,
@@ -20,6 +21,7 @@ export default class ArticleListItem extends Component {
 
   render() {
     const { article } = this.props;
+    const image = article.image ? article.image.slice(15) : '';
     return (
       <div className="listItem">
         <p className="date">{moment(article.date).format("LLLL")}</p>
@@ -37,7 +39,7 @@ export default class ArticleListItem extends Component {
               })}
             </div>
             {
-              article.image ? <img src={article.image} className="image"/> : null
+              article.image ? <img src={Http.picUrl(image)} className="image"/> : null
             }
           </Card>
         </div>
