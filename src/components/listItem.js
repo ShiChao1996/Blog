@@ -28,7 +28,7 @@ export default class ArticleListItem extends Component {
         <div className="card">
           <Card>
             <h1>
-              <Link to={{ pathname: '/article', query: {id: article._id} }} className=''>
+              <Link to={{ pathname: '/article', query: {_id: article.contentId} }} className=''>
                 {article.title}
               </Link>
             </h1>

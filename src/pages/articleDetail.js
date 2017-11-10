@@ -8,9 +8,9 @@ import MarkDown from '../components/markdown';
 import TopBar from '../components/topBar';
 import Container from '../container/container';
 import './articleDetail.css';
-import Http, { getUrl } from '../utils/http';
+import Http from '../utils/http';
 
-export default class HomePage extends Component {
+export default class ArticleDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,15 +19,10 @@ export default class HomePage extends Component {
   }
 
   componentWillMount() {
-    console.log(Http)
     let data = this.props.location.query;
-    console.log(data);
-    console.log(Http.url('article/getdetail'))
-    Http.Post(Http.url('article/getdetail'), data, (res) => {
-      if(res.status === 0){
-        console.log(res)
-        let md = res.resp.content
-        console.log(md)
+    Http.Post(Http.url('article/getcontent'), data, (res) => {
+      if (res.status === 0) {
+        let md = res.resp.content;
         this.setState({
           text: md.toString()
         })
@@ -36,9 +31,11 @@ export default class HomePage extends Component {
   }
 
   render() {
-    let child = () => <div className='content'><MarkDown text={this.state.text} /></div>;
+    let child = () => <div className='content'><MarkDown text={this.state.text}/></div>
+
     return (
-      <Container child={child} />
+      <Container Child={child} />
     )
   }
 }
+
