@@ -12,6 +12,7 @@ import './index.css';
 import Welcome from './src/pages/welcome';
 import HomePage from './src/pages/home';
 import ArticleDetail from './src/pages/articleDetail';
+import Archieve from './src/pages/archieve';
 
 const router = (
     <Router history={hashHistory}>
@@ -19,7 +20,7 @@ const router = (
             <IndexRoute component={Welcome} />
             <Route path="/welcome" component={Welcome} />
             <Route path="/home" component={HomePage}/>
-            <Route path="/archive" component={HomePage} />
+            <Route path="/archive" component={Archieve} />
             <Route path="/article" component={ArticleDetail} />
         </Route>
     </Router>

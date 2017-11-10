@@ -1,0 +1,14 @@
+.tagsGrid {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tag-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 10px;
+    font-size: 18px;
+    color: white;
+}
