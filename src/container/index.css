@@ -1,4 +1,4 @@
-.container{
+.container {
     width: 100%;
     min-width: 1000px;
     margin: 0 auto;
@@ -9,26 +9,33 @@
     padding-bottom: 80px;
 }
 
-.row{
+.row {
     height: 100%;
     margin: 0 auto;
 }
 
-.left{
+.left {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.head{
+.head {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
 }
 
-.contaner-footer{
+.contaner-footer {
     bottom: 0;
     left: 0;
     right: 0;
+}
+
+.container-body {
+    position: absolute;
+    top: 60px;
+    bottom: 70px;
+    width: 100%;
 }

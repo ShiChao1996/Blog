@@ -21,9 +21,12 @@ export default class Container extends Component {
         <div className="head">
           <TopBar type='dark'/>
         </div>
-        {
-          typeof Child === 'function' ? Child() : <Child/>
-        }
+        <div className='container-body' >
+          {
+            Child && Child()
+          }
+        </div>
+
         <div className='footer'>
           Powered by Lovae | 2017
         </div>

@@ -6,11 +6,10 @@ import {
   Row,
   Col
 } from 'antd';
-import MarkDown from '../components/markdown';
-import TopBar from '../components/topBar';
 import Container from '../container/container';
+import List from '../components/list';
 import './archieve.css';
-import Http, { getUrl } from '../utils/http';
+import Http from '../utils/http';
 
 const colors = [ 'pink', 'red', 'orange', 'green', 'cyan', 'blue', 'purple' ];
 
@@ -18,12 +17,13 @@ class Archieve extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tags: []
+      tags: [],
+      articles: []
     }
   }
 
   componentWillMount() {
-    Http.Get(getUrl('article/gettags'), (res) => {
+    Http.Get(Http.url('article/gettags'), (res) => {
       console.log(res);
       if (res.status === 0) {
         this.setState({
@@ -35,6 +35,17 @@ class Archieve extends Component {
     })
   }
 
+  getArticleByTag(tag) {
+    Http.Post(Http.url('article/getbytag'), { tag }, (res) => {
+      if (res.status === 0) {
+        console.log()
+        this.setState({
+          articles: res.resp
+        });
+      }
+    })
+  }
+
   render() {
     return (
       <div className='tagsGrid'>
@@ -43,11 +54,17 @@ class Archieve extends Component {
             this.state.tags.map((tag, index) => {
               return (
                 <Col xs={20} sm={12} md={8} lg={6} key={index}>
-                  <Card style={{backgroundColor: colors[index%colors.length]}} className='tag-card'>{tag}</Card>
+                  <Card onClick={() => this.getArticleByTag(tag)}
+                        style={{ backgroundColor: colors[ index % colors.length ] }} className='tag-card'>{tag}</Card>
                 </Col>
               )
             })
           }
+          <div className="tagged-list">
+            {
+              this.state.articles.length === 0 ? null : List(this.state.articles)
+            }
+          </div>
         </Row>
       </div>
     )
@@ -61,7 +78,13 @@ export default class ArchivePage extends Component {
 
   render() {
     return (
-      <Container Child={Archieve}/>
+      <Container Child={() => {
+        return (
+          <div className="archieve-content">
+            <Archieve/>
+          </div>
+        )
+      }}/>
     )
   }
 }

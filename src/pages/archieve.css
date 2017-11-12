@@ -12,3 +12,11 @@
     font-size: 18px;
     color: white;
 }
+
+.archieve-content{
+    height: 100%;
+}
+
+.tagged-list{
+    position: relative;
+}
