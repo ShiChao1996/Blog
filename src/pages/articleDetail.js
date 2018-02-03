@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import {
-  Card,
-  Affix,
-  Button
+  Spin
 } from 'antd';
 import MarkDown from '../components/markdown';
-import TopBar from '../components/topBar';
-import Container from '../container/container';
 import './articleDetail.css';
 import Http from '../utils/http';
 
@@ -19,7 +15,9 @@ export default class ArticleDetail extends Component {
   }
 
   componentWillMount() {
+    console.log("detail init")
     let data = this.props.location.query;
+    console.log(this.props.location)
     Http.Post(Http.url('article/getcontent'), data, (res) => {
       if (res.status === 0) {
         let md = res.resp.content;
@@ -31,10 +29,12 @@ export default class ArticleDetail extends Component {
   }
 
   render() {
-    let child = () => <div className='content'><MarkDown text={this.state.text}/></div>
-
     return (
-      <Container Child={child} />
+      <div className='content'>
+        {
+          this.state.text === "" ? <Spin size="large"/> : <MarkDown text={this.state.text}/>
+        }
+      </div>
     )
   }
 }

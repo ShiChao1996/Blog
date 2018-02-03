@@ -4,12 +4,13 @@ import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import ticker from 'rc-tween-one/lib/ticker';
 import Radio from 'antd/lib/radio';
 import PropTypes from 'prop-types';
-import './welcome.css';
 import {
   Route,
-  Link
-} from 'react-router';
+  Link,
+} from 'react-router-dom';
 import QueueAnim from 'rc-queue-anim';
+import './welcome.css';
+import HomePage from './home';
 
 const RadioGroup = Radio.Group;
 
@@ -59,7 +60,6 @@ class LogoGather extends React.Component {
   };
 
   onMouseLeave = () => {
-    console.log('leave')
     // this.gather && this.updateTweenData();
     if (this.gather) {
       this.updateTweenData();
@@ -200,7 +200,7 @@ class LogoGather extends React.Component {
             <span key='a' className='welcome'>Welcome to Lovae's Blog</span>
             <br/>
             <div className="linkText" key='b'>
-              <Link to='/home' className='myLink' activeStyle={{ color: 'blue', backgroundColor: '#ffffff' }}>
+              <Link to='/index' className='myLink'>
                 Go HomePage
               </Link>
             </div>

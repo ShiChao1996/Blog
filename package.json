@@ -29,7 +29,7 @@
     "babel-runtime": "^6.9.2",
     "dora": "0.4.x",
     "dora-plugin-webpack": "^0.8.1",
-    "eslint": "^3.8.1",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
@@ -38,13 +38,10 @@
     "pre-commit": "1.x",
     "redbox-react": "^1.2.6"
   },
-  "pre-commit": [
-    "lint"
-  ],
   "scripts": {
     "build": "atool-build",
     "lint": "eslint --ext .js,.jsx src/",
-    "start": "dora -p 8081 --plugins webpack",
+    "start": "dora -p 8001 --plugins webpack",
     "test": "atool-test-mocha ./**/__tests__/*-test.js"
   }
 }

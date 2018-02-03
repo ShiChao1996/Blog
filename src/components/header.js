@@ -41,7 +41,12 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div className='header'>
+          <TopBar />
+        )
+    }
+}
+
+{/* <div className='header'>
                 <TopBar />
                 <Carousel autoplay dots={false} autoplaySpeed={8000} speed={1000}
                           effect="fade"
@@ -58,7 +63,4 @@ export default class Header extends Component {
                     </span>
                 </div>
 
-            </div>
-        )
-    }
-}
+            </div>*/}

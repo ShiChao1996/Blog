@@ -191,12 +191,12 @@ function requestByPost(url, params, onSucceed, onFailure) {
 }
 
 export function getUrl(route) {
-  //return "http://47.95.229.232:7001/" + route;
-  return "http://127.0.0.1:7006/" + route;
+  return "http://api.littlechao.top/" + route;
+  //return "http://127.0.0.1:7001/" + route;
 }
 
 export function picUrl(route) {
-  return "http://127.0.0.1:8082/" + route;
+  return "http://image.littlechao.top/" + route;
 }
 
 const Http = {

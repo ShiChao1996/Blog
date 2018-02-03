@@ -9,10 +9,10 @@ import moment from 'moment';
 import {
   Route,
   Link,
-} from 'react-router';
+} from 'react-router-dom';
 import './listItem.css';
 
-const colors = [ 'pink', 'red', 'orange', 'green', 'cyan', 'blue', 'purple' ]
+const colors = [ 'pink', 'red', 'orange', 'green', 'cyan', 'blue', 'purple' ];
 
 export default class ArticleListItem extends Component {
   constructor(props) {
@@ -28,7 +28,10 @@ export default class ArticleListItem extends Component {
         <div className="card">
           <Card>
             <h1>
-              <Link to={{ pathname: '/article', query: {_id: article.contentId} }} className=''>
+              <Link to={{
+                pathname: '/index/article',
+                query: {_id: article.contentId}
+              }}>
                 {article.title}
               </Link>
             </h1>

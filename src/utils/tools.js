@@ -39,10 +39,15 @@ function randomInt(min, max) {
   return Math.floor(max * Math.random()) - min;
 }
 
+function getScrollTop() {
+  return window.pageYOffset || document.documentElement.scrollTop;
+}
+
 export const tools = {
   copyAttrExcept,
   zeroArr,
   copyAttr,
   generalKey: generalKey(),
-  randomInt
+  randomInt,
+  scrollTop:getScrollTop
 }

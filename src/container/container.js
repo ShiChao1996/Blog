@@ -1,32 +1,40 @@
 import React, { Component } from 'react'
 import {
-  BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Switch
 } from 'react-router-dom';
-
-
 import './index.css'
 import TopBar from '../components/topBar';
+import HomePage from '../pages/home';
+import ArticleDetail from '../pages/articleDetail';
+import Archieve from '../pages/archieve';
 
 export default class Container extends Component {
   constructor(props) {
     super(props);
   }
 
+  componentDidMount() {
+    window.addEventListener("move", this.handleScroll)
+  }
+
+  handleScroll = (e) => {
+    this.refs.header.handleScroll(e)
+  };
+
   render() {
-    const { Child } = this.props;
     return (
       <div className='container' style={{ minHeight: window.screen.availHeight - 70 }}>
-        <div className="head">
-          <TopBar type='dark'/>
+        <TopBar type='light' ref="header"/>
+        <br/>
+        <div>
+          <Switch>
+            <Route path="/index/" exact component={HomePage}/>
+            <Route path="/index/article" component={ArticleDetail}/>
+            <Route path="/archive" component={Archieve}/>
+          </Switch>
         </div>
-        <div className='container-body' >
-          {
-            Child && Child()
-          }
-        </div>
-
         <div className='footer'>
           Powered by Lovae | 2017
         </div>
