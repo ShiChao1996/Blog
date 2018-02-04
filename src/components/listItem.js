@@ -30,7 +30,8 @@ export default class ArticleListItem extends Component {
             <h1>
               <Link to={{
                 pathname: '/index/article',
-                query: {_id: article.contentId}
+                query: {_id: article.contentId},
+                search: "_id=" + article.contentId,
               }}>
                 {article.title}
               </Link>

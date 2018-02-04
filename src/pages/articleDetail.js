@@ -15,9 +15,9 @@ export default class ArticleDetail extends Component {
   }
 
   componentWillMount() {
-    console.log("detail init")
-    let data = this.props.location.query;
-    console.log(this.props.location)
+    let data = {
+      _id: this.props.location.search.slice(5)
+    };
     Http.Post(Http.url('article/getcontent'), data, (res) => {
       if (res.status === 0) {
         let md = res.resp.content;
