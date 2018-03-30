@@ -1,8 +1,16 @@
 .content{
-    width: 700px;
-    margin: 60px auto;
+    width: 80%;
+    margin: 20px auto;
     padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 900px;
+}
+
+@media (max-width: 600px) {
+    .content{
+        width: 90%;
+        padding-top: 15px;
+    }
 }

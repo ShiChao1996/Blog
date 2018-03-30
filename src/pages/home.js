@@ -27,9 +27,10 @@ export default class HomePage extends Component {
     }
     Http.Get(Http.url('article/getall'), (res) => {
       if (res.status === 0) {
-        Cache.saveList('articleList', res.resp);
+        let l = res.resp.reverse();
+        Cache.saveList('articleList', l);
         this.setState({
-          articleList: res.resp
+          articleList: l,
         })
       }
     }, (err) => {
@@ -42,7 +43,7 @@ export default class HomePage extends Component {
       <div className="body">
         <div>
           <Canvas/>
-          <div className='content'>
+          <div className='home-content'>
             {
               this.state.articleList.length === 0 ? null :
               <Card>

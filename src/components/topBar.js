@@ -16,6 +16,7 @@ export default class topBar extends Component {
     }
   }
 
+/*
   handleScroll = (e) => {
     console.log(e)
     if (tools.scrollTop() > 400 && this.state.show) {
@@ -30,6 +31,7 @@ export default class topBar extends Component {
       });
     }
   };
+*/
 
   render() {
     const { type } = this.props;
@@ -45,11 +47,12 @@ export default class topBar extends Component {
           <div className='myButton'>
             <Link to='/index/' className={light ? 'linkLight' : 'linkDark'}>Home</Link>
           </div>
-          <div className='myButton'>
+          {/*<div className='myButton'>
             <Link to='/index/archive' className={light ? 'linkLight' : 'linkDark'}>archive</Link>
-          </div>
+          </div>*/}
           <div className='myButton'>
-            <Link to='/#/about' className={light ? 'linkLight' : 'linkDark'}>About Me</Link>
+            {/*<Link to='/index/about' className={light ? 'linkLight' : 'linkDark'}>About Me</Link>*/}
+            <a href="http://resume.littlechao.top/resume2.pdf" target="_blank" className={light ? 'linkLight' : 'linkDark'}>Me</a>
           </div>
         </div>
       </div>

@@ -2,7 +2,6 @@
 html, body, #root {
     height: 100%;
     width: 100%;
-    min-width: 900px;
 }
 
 .linkBtn {
@@ -15,13 +14,12 @@ html, body, #root {
 .bodyContainer {
     position: relative;
     width: 100%;
-    min-width: 900px;
 }
 
 .myButton {
     box-sizing: border-box;
     padding: 5px 8px;
-    margin: 0 10px;
+    margin: 0 5px;
     border-radius: 5px;
     color: white;
     background-color: transparent;

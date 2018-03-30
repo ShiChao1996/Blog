@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MarkDown from 'react-markdown';
-import './markdown.css';
+import './markdown2.css'
 
 export default class MyMarkDown extends Component{
     constructor(props){
@@ -26,7 +26,7 @@ export default class MyMarkDown extends Component{
 
     render(){
         return(
-            <MarkDown className='markdownWrapper' source={this.state.text} />
+            <MarkDown className='markdown-body' source={this.state.text} />
         )
     }
 }

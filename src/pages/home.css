@@ -4,30 +4,17 @@
     z-index: 5;
 }
 
-.bodyRight {
-    background-color: #364d79;
-    width: 800px;
-    margin-top: 30px;
-    margin-right: 80px;
-    float: right;
-}
-
-.bodyLeft {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content{
+.home-content{
     margin: 0 auto;
+    padding-top: 30px;
     width: 80%;
-    min-width: 800px;
+    max-width: 900px;
     opacity: 0.9;
-    /*todo*/
 }
 
-.box {
-    margin: 100px 30px;
-    height: 400px;
-    width: 260px;
+@media (max-width: 600px) {
+    .home-content{
+        width: 100%;
+        padding-top: 15px;
+    }
 }

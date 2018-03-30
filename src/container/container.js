@@ -9,19 +9,20 @@ import TopBar from '../components/topBar';
 import HomePage from '../pages/home';
 import ArticleDetail from '../pages/articleDetail';
 import Archieve from '../pages/archieve';
+import NotFound from '../pages/notfound';
 
 export default class Container extends Component {
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
+ /* componentDidMount() {
     window.addEventListener("move", this.handleScroll)
   }
 
   handleScroll = (e) => {
     this.refs.header.handleScroll(e)
-  };
+  };*/
 
   render() {
     return (
@@ -33,6 +34,7 @@ export default class Container extends Component {
             <Route path="/index/" exact component={HomePage}/>
             <Route path="/index/article" component={ArticleDetail}/>
             <Route path="/archive" component={Archieve}/>
+            <Route path="/index/about" component={NotFound}/>
           </Switch>
         </div>
         <div className='footer'>

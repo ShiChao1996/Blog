@@ -1,16 +1,6 @@
-/*
-.listItem{
-    margin: 20px 10px;
-}
-
-.contentPreview{
-    font-size: 14px;
-    display: inline-block;
-    color: #666666;
-    margin: 10px;
-}*/
 .listItem {
     margin: 10px 0;
+    width: 100%;
 }
 
 .card{
